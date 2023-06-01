@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "dnFlDAWtiwk54x661f4+qraOTsloVXw3UPT0Gc4wo5s6HrnOpr30K14WAXkkkGFXj1YbXNxjrD2P60afKLKDuw==",
+  "dgSpecHash": "X5QCZ9eugfzbv+dT4Y4iCxNAvucsJSWm64nkmDfbQSU7rgCkiZLscfUVUF1b6wGA0NDxG6KM94C+W0AA2v7K6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\linta\\source\\repos\\OOP_FinalProject_2\\OOP_FinalProject_2\\OOP_FinalProject_2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\linta\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\linta\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
