@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOP_FinalProject_2
 {
-    class JewelryStore
+    [Serializable]
+    public class JewelryStore
     {
         public string Address { get; set; }
         public int Count { get; set; }

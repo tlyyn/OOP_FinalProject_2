@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace OOP_FinalProject_2
 {
@@ -10,6 +11,8 @@ namespace OOP_FinalProject_2
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             List<JewelryStore> stores = new List<JewelryStore>();
 
             // зчитування даних з файлу
@@ -67,6 +70,30 @@ namespace OOP_FinalProject_2
                         lines.Add(line);
                     }
                 }
+            }
+
+            // Серіалізація у XML формат
+            var serializer = new XmlSerializer(typeof(List<JewelryStore>));
+            using (var writer = new StreamWriter("data.xml"))
+            {
+                serializer.Serialize(writer, stores);
+            }
+
+            // Десереалізація з XML формату
+            using (var reader = new StreamReader("data.xml"))
+            {
+                var deserializer = new XmlSerializer(typeof(List<JewelryStore>));
+                var stores1 = (List<JewelryStore>)deserializer.Deserialize(reader);
+
+                // Виведення даних на екран
+                foreach (var store in stores1)
+                {
+                    Console.WriteLine(store.Address);
+                    foreach (var item in store.JewelryList)
+                    {
+                        Console.WriteLine($"- {item.Name} ({item.Metal}, {item.Weight}g, ${item.Price})");
+                    }
+                }
 
 
                 // список всіх назв металу (без повторів), що присутні у ювелірних виробах магазинів
@@ -85,6 +112,7 @@ namespace OOP_FinalProject_2
                         }
                     }
                 }
+
 
                 // запис списку всіх назв металу (без повторів) у файл
                 using (StreamWriter writer = new StreamWriter("metals.txt"))
@@ -116,6 +144,5 @@ namespace OOP_FinalProject_2
         }
     }
 }
-
 
 
